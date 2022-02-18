@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name ="postagem")
-
+//Objeto Postagem
 public class Postagem {
 	
 	//
