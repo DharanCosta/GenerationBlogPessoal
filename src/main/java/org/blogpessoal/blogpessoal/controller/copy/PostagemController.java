@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class PostagemController {
 
-	@Autowired  // Autowired é a gestão de dependencias do Spring
+	@Autowired  // Autowired é a gestão de dependencias do Spring - para acessar os repositórios
 	private PostagemRepository repositoty;
 				
 	//Método Get-FindAll em formato de lista
