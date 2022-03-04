@@ -1,4 +1,4 @@
-package org.blogpessoal.blogpessoal.controller.copy;
+package org.blogpessoal.blogpessoal.controller;
 
 import java.util.List;
 
