@@ -46,7 +46,7 @@ public class UsuarioControllerTest {
 	public void createUserReturn201() {
 		// GIVEN
 		HttpEntity<Usuario> request = new HttpEntity<Usuario>(
-				new Usuario(0L,"Italo Boaz", "Italo77", "123456789"));
+				new Usuario(0L,"Italo Boaz","LinkFoto", "Italo77", "123456789"));
 		// WHEN
 		ResponseEntity<Usuario> response = testRestTemplate
 				.exchange("/usuarios/cadastrar", HttpMethod.POST, request, Usuario.class);
@@ -60,9 +60,9 @@ public class UsuarioControllerTest {
 	@DisplayName("Não permitir duplicação de Usuários")
 	public void blockUserDuplication() {
 		
-		services.CadastrarUsuario(new Usuario(0L,"Dharan Boaz", "Dharan22", "123456789"));
+		services.CadastrarUsuario(new Usuario(0L,"Dharan Boaz","LinkFoto", "Dharan22", "123456789"));
 		
-		HttpEntity<Usuario> request = new HttpEntity<Usuario>(new Usuario(0L,"Dharan Boaz", "Dharan22", "123456789"));
+		HttpEntity<Usuario> request = new HttpEntity<Usuario>(new Usuario(0L,"Dharan Boaz","LinkFoto","Dharan22", "123456789"));
 		
 		ResponseEntity<Usuario> response = testRestTemplate
 				.exchange("/usuarios/cadastrar",HttpMethod.POST, request, Usuario.class);
@@ -77,9 +77,9 @@ public class UsuarioControllerTest {
 	@DisplayName("Alterar um Usuário")
 	public void updateUsuario() {
 		
-		Optional<Usuario> usuarioCreate = services.CadastrarUsuario(new Usuario(0L,"Dharan BoLaz", "Dharan22", "123456789"));
+		Optional<Usuario> usuarioCreate = services.CadastrarUsuario(new Usuario(0L,"Dharan BoLaz", "LinkFoto","Dharan22", "123456789"));
 		
-		Usuario usuarioUpdate = new Usuario(usuarioCreate.get().getId(),"Dharan Costa", "Dharan22", "123456789");
+		Usuario usuarioUpdate = new Usuario(usuarioCreate.get().getId(),"Dharan Costa","LinkFoto", "Dharan22", "123456789");
 		
 		HttpEntity<Usuario> request = new HttpEntity<Usuario>(usuarioUpdate);
  		
@@ -98,9 +98,9 @@ public class UsuarioControllerTest {
 	@DisplayName("Listar todos os Usuários")
 	public void returnAllUsers() {
 		
-		services.CadastrarUsuario(new Usuario(0L,"Igor Boaz", "Igor55", "123456789"));
+		services.CadastrarUsuario(new Usuario(0L,"Igor Boaz","LinkFoto", "Igor55", "123456789"));
 		
-		services.CadastrarUsuario(new Usuario(0L,"Carlos Boaz", "Carlos23", "123456789"));
+		services.CadastrarUsuario(new Usuario(0L,"Carlos Boaz", "LinkFoto","Carlos23", "123456789"));
 		
 		ResponseEntity<String> response = testRestTemplate
 				.withBasicAuth("Dharan", "1234")
