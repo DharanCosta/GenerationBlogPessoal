@@ -81,7 +81,7 @@ public class UsuarioService {
 			
 		throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário não encontrado!", null);		
 	}	
-	
+	/* Criptografar Senha */
 	private String criptografarSenha(String senha) {
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -89,5 +89,13 @@ public class UsuarioService {
 
 		return senhaEncoder;
 	}
+	
+	/* Comparar Senha 
+	private boolean compararSenhas(String senhaDigitada, String senhaBanco) {
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		return encoder.matches(senhaDigitada, senhaBanco);
+	}*/
+
+	
 	
 }

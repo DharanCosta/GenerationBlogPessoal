@@ -31,10 +31,10 @@ public class UsuarioRepositoryTest {
 	@BeforeAll
 	void start() {
 		repository.deleteAll();
-		repository.save(new Usuario(0L,"Dharan Costa","dharan55","12345678"));
-		repository.save(new Usuario(0L,"Dhyana Costa","dhyana66","12345678"));
-		repository.save(new Usuario(0L,"Orlando Costa","Orlando77","12345678"));
-		repository.save(new Usuario(0L,"Cristiane Ristori","Cristiane88","12345678"));
+		repository.save(new Usuario(0L,"Dharan Costa","LinkFoto","dharan55","12345678"));
+		repository.save(new Usuario(0L,"Dhyana Costa","LinkFoto","dhyana66","12345678"));
+		repository.save(new Usuario(0L,"Orlando Costa","LinkFoto","Orlando77","12345678"));
+		repository.save(new Usuario(0L,"Cristiane Ristori","LinkFoto","Cristiane88","12345678"));
 	}
 	
 	@Test

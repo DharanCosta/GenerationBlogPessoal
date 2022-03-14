@@ -18,9 +18,9 @@ public class OpenAPIConfiguration {
 	public OpenAPI springBlogPessoalOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-					.title("Projeto Blog Pessoal")
-					.description("Projeto Blog Pessoal - Generation Brasil")
-					.version("v0.0.1")
+				.title("Projeto Blog Pessoal")
+				.description("Projeto Blog Pessoal - Generation Brasil")
+				.version("v0.0.1")
 				.license(new License()
 					.name("Generation Brasil")
 					.url("https://brazil.generation.org/"))
@@ -29,7 +29,7 @@ public class OpenAPIConfiguration {
 					.url("https://github.com/conteudoGeneration")
 					.email("dharancosta@gmail.com")))
 				.externalDocs(new ExternalDocumentation()
-					.description("Github")
+					.description("Github Project")
 					.url("https://github.com/DharanCosta/GenerationBlogPessoal"));
 	}
 	
