@@ -14,6 +14,8 @@ public class UserLogin {
 	
 	private String token;
 
+	private String tipo;
+
 	
 	/*GETTER & SETTERS */
 	
@@ -64,4 +66,14 @@ public class UserLogin {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	
 }
